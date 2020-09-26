@@ -60,7 +60,7 @@ class vision:
         max_area = 0
         max_cnt = []
         # Get contours. 
-        bin, contours, _hierarchy = cv2.findContours(self.mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contours, _hierarchy = cv2.findContours(self.mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         for cnt in contours:
             # Get area of contours.
             cnt_area = cv2.contourArea(cnt)
